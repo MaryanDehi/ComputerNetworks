@@ -1,3 +1,5 @@
+# Socket Programming Project
+## Summary
 In this short programming project, I wrote a client that uses sockets to communicate with a server that I wrote.  
 Here’s what my client and server do:
 
@@ -17,10 +19,13 @@ Here’s what my client and server do:
 
 iv. Client prints the server name and numbers.
 
-How to run the project:
-    run: python server.py
-    Open new terminal and run: python client.py
-    Enter integer when prompted
+## How to run the project
+    python server.py
+Open new terminal and run: 
+```
+python client.py
+```
+   Enter integer when prompted
 
 Exit server when done.
 
