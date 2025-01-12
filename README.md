@@ -1,32 +1,44 @@
-# Socket Programming Project
-## Summary
-In this short programming project, I wrote a client that uses sockets to communicate with a server that I wrote.  
-Here’s what my client and server do:
+# Project: Client-Server Communication with Sockets
 
- 
+This project demonstrates a simple client-server communication using Python sockets. The server and client exchange messages and perform basic operations based on the inputs provided.
 
- My client will first accept an integer between 1 and 100 from the keyboard, open a TCP socket to the server and send a message containing (i) a string containing my name (e.g., “Client of Tharushika Dehipitiarachchi) and (ii) the entered integer value and then wait for a sever reply.
+## Project Overview
 
- 
+- **Server**: Listens for incoming connections, processes client messages, and sends a response.
+  - Generates a random integer between 1 and 100.
+  - Calculates the sum of its random number and the number sent by the client.
+  - Sends the result and its details back to the client.
+  
+- **Client**: Sends a name and an integer to the server, receives a response, and displays the result.
+  - Accepts an integer between 1 and 100 from the user.
+  - Connects to the server and sends a message containing the client's name and the integer.
+  - Displays the server's name, random number, and the calculated sum received from the server.
 
- My server creates a string containing its name (e.g., “Server of Bob Smith”) and then begin accepting connections from clients.  On receipt of a client message, my server 
+## How to Run the Project
 
- i. prints (display) the client’s name (extracted from the received message) and the server’s name
+1. **Start the Server**:
+   - Open a terminal and run:
+     ```bash
+     python server.py
+     ```
+   - The server will start listening for incoming connections on `localhost:12345`.
 
- ii. Server picks a random integer number between 1 and 100 and finds the sum of its number and client number
+2. **Run the Client**:
+   - Open a new terminal and run:
+     ```bash
+     python client.py
+     ```
+   - Enter an integer between 1 and 100 when prompted.
 
- iii. Server send its name string and the server-chosen integer value and the sum to the client
+3. **Interaction**:
+   - The client sends the entered integer to the server.
+   - The server generates a random integer, calculates the sum, and sends the details back.
+   - The client displays the server's name, random number, and the sum.
 
-iv. Client prints the server name and numbers.
+4. **Stop the Server**:
+   - Close the server terminal when you are done.
 
-## How to run the project
-    python server.py
-Open new terminal and run: 
-```
-python client.py
-```
-   Enter integer when prompted
+## Notes
 
-Exit server when done.
-
- 
+- Ensure that both `server.py` and `client.py` are in the same directory or accessible from your working directory.
+- The server and client communicate over `localhost` and port `12345` by default. Update these settings in the scripts if needed.
